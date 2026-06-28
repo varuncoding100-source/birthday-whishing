@@ -1,1 +1,100 @@
-# birthday-whishing
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 35px;
+            width: 350px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #e91e63;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #e91e63;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+
+        #wishMessage {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>🎉 Happy Birthday 🎂</h1>
+
+        <input type="text" id="nameInput" placeholder="Enter Birthday Name">
+        <br>
+
+        <button onclick="generateWish()">Generate Wish</button>
+
+        <div id="wishMessage"></div>
+    </div>
+
+    <script>
+        function generateWish() {
+            var name = document.getElementById("nameInput").value;
+            var message = document.getElementById("wishMessage");
+
+            if (name.trim() === "") {
+                message.innerHTML = "Please enter a name 😊";} 
+              else if(name.trim() === "Varun shukla"){
+                message.innerHTML =
+                    "🎊 Happy Birthday by his self! 🎂<br><br>" +
+                    "Wish Birthday by Varun Shukla 💖";
+              }
+                else {
+                message.innerHTML ="🎊 Happy Birthday " + name + "! 🎂<br><br>" +
+                    "Wish Birthday by Varun Shukla 💖";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
